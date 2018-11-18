@@ -1,0 +1,804 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700");
+/* 01. Reset CSS */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+html,
+body {
+  min-height: 100%; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: #404040; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", sans-serif; }
+
+h1 {
+  font-size: 3.2rem; }
+
+h2 {
+  font-size: 2.4rem; }
+
+h3 {
+  font-size: 1.8rem; }
+
+h4 {
+  font-size: 1.6rem; }
+
+h5 {
+  font-size: 1.4rem; }
+
+h6 {
+  font-size: 1.1rem; }
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+ul li {
+  list-style: none; }
+
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  outline: none;
+  border: none; }
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 0 solid; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+i {
+  font-style: normal; }
+
+figure {
+  margin: 0;
+  padding: 0; }
+
+.clear::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+section {
+  background-color: #fff; }
+
+::-moz-selection {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff; }
+
+::selection {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff; }
+
+.is-sticky {
+  position: relative;
+  z-index: 100000; }
+
+.vh-100 {
+  height: 100vh; }
+
+.content__box {
+  padding-top: 8rem;
+  padding-bottom: 8rem; }
+
+/*
+<!-- |==========================================| -->
+<!-- |=====|| google-map-1 start ||===============| -->
+<section class="google-map-1">
+  <div class="mapouter">
+    <div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=Oakland&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe><a href="https://www.pureblack.de">werbeagentur</a></div>
+  </div>
+</section>
+<!-- |=====|| google-map-1 end ||=================| -->
+<!-- |==========================================| -->
+*/
+.scrollToTop {
+  position: fixed;
+  display: none;
+  bottom: 1.5rem;
+  right: 2rem;
+  z-index: 100000;
+  color: #fff;
+  background-color: #000;
+  height: 4.5rem;
+  width: 4.5rem;
+  text-align: center;
+  line-height: 4.5rem;
+  transition: all .3s; }
+  .scrollToTop:hover {
+    color: #fff;
+    background-color: #e49504; }
+  @media only screen and (max-width: 47.9375em) {
+    .scrollToTop {
+      bottom: 1rem;
+      right: 1rem; } }
+  @media only screen and (max-width: 35.9375em) {
+    .scrollToTop {
+      height: 4rem;
+      width: 4rem;
+      line-height: 4rem; } }
+  .scrollToTop i::before {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0; }
+
+.btn {
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 1rem 2rem;
+  color: #333;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  border-radius: 0.125rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14), 0 2px 8px 0 rgba(0, 0, 0, 0.1); }
+  .btn:hover {
+    color: #333; }
+
+.btn:hover,
+.btn:focus {
+  text-decoration: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14), 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent; }
+
+.btn:focus,
+.btn.focus {
+  outline: 0; }
+
+/*!
+ * SlickNav Responsive Mobile Menu v1.0.10
+ * (c) 2016 Josh Cope
+ * licensed under MIT
+ */
+.slicknav_btn,
+.slicknav_nav .slicknav_item {
+  cursor: pointer; }
+
+.slicknav_menu,
+.slicknav_menu * {
+  box-sizing: border-box; }
+
+.slicknav_btn {
+  position: relative;
+  display: block;
+  float: right;
+  padding: .438em .625em;
+  line-height: 1.125em; }
+
+.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
+  margin-top: 0.188em; }
+
+.slicknav_menu .slicknav_menutxt {
+  display: block;
+  line-height: 1.188em;
+  float: left;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 1px 3px #000; }
+
+.slicknav_menu .slicknav_icon {
+  float: left;
+  width: 1.125em;
+  height: .875em;
+  margin: 0.188em 0 0 0.438em; }
+
+.slicknav_menu .slicknav_icon:before {
+  background: 0 0;
+  width: 1.125em;
+  height: .875em;
+  display: block;
+  content: "";
+  position: absolute; }
+
+.slicknav_menu .slicknav_no-text {
+  margin: 0; }
+
+.slicknav_menu .slicknav_icon-bar {
+  display: block;
+  width: 1.125em;
+  height: .125em;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); }
+
+.slicknav_menu:after,
+.slicknav_menu:before {
+  content: " ";
+  display: table; }
+
+.slicknav_menu:after {
+  clear: both; }
+
+.slicknav_nav li,
+.slicknav_nav ul {
+  display: block; }
+
+.slicknav_nav .slicknav_arrow {
+  font-size: .8em;
+  margin: 0 0 0 0.4em; }
+
+.slicknav_nav .slicknav_item a {
+  display: inline; }
+
+.slicknav_nav .slicknav_row,
+.slicknav_nav a {
+  display: block; }
+
+.slicknav_nav .slicknav_parent-link a {
+  display: inline; }
+
+.slicknav_menu {
+  *zoom: 1;
+  font-size: 16px;
+  background: #1D1E26;
+  padding: 5px; }
+
+.slicknav_nav,
+.slicknav_nav ul {
+  list-style: none;
+  overflow: hidden;
+  padding: 0; }
+
+.slicknav_menu .slicknav_icon-bar {
+  background-color: #fff; }
+
+.slicknav_btn {
+  margin: 5px 5px 6px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #222; }
+
+.slicknav_nav {
+  clear: both;
+  color: #fff;
+  margin: 0;
+  font-size: 0.875em; }
+
+.slicknav_nav ul {
+  margin: 0 0 0 20px; }
+
+.slicknav_nav .slicknav_row,
+.slicknav_nav a {
+  padding: 5px 10px;
+  margin: 2px 5px; }
+
+.slicknav_nav .slicknav_row:hover {
+  background: #3b3b3b;
+  color: #fff; }
+
+.slicknav_nav a {
+  text-decoration: none;
+  color: #fff; }
+
+.slicknav_nav a:hover {
+  background: #3b3b3b;
+  color: #222; }
+
+.slicknav_nav .slicknav_txtnode {
+  margin-left: 15px; }
+
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a {
+  padding: 0;
+  margin: 0; }
+
+.slicknav_brand {
+  float: left;
+  color: #fff;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 7px 12px;
+  height: 44px; }
+
+.oilymenu {
+  background: #fff;
+  height: 75px;
+  box-shadow: 0 8px 6px -9px #999;
+  position: relative; }
+  .oilymenu__logo {
+    line-height: 72px;
+    display: inline-block; }
+    .oilymenu__logo img {
+      width: 14rem; }
+      @media only screen and (max-width: 74.9375em) {
+        .oilymenu__logo img {
+          width: 12rem; } }
+  .oilymenu ul {
+    text-align: right; }
+  .oilymenu ul li a {
+    font-family: "Roboto", sans-serif;
+    color: #222;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 2.5rem 2.5rem;
+    transition: all .3s; }
+    .oilymenu ul li a:hover {
+      color: #e49504; }
+  .oilymenu__mainmenu li {
+    display: inline-block;
+    position: relative; }
+    .oilymenu__mainmenu li:hover ul ul {
+      visibility: hidden;
+      opacity: 0; }
+  .oilymenu__mainmenu li ul {
+    position: absolute;
+    left: 0px;
+    top: 85px;
+    width: 20rem;
+    text-align: left;
+    transition: all .3s;
+    border-top: 3px solid #fbb431;
+    border-bottom: 3px solid #fbb431;
+    border-radius: 3px;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden; }
+  .oilymenu__mainmenu li ul li {
+    display: block;
+    background: #1D1E26; }
+  .oilymenu__mainmenu li ul li a {
+    padding: 1rem 1.5rem;
+    transition: all .2s;
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    font-size: 1.2rem; }
+  .oilymenu__mainmenu ul li ul {
+    left: 20rem; }
+  .oilymenu__mainmenu ul li:hover > ul {
+    left: 20rem;
+    top: 0;
+    visibility: visible;
+    opacity: 1; }
+
+.oilymenu__mainmenu li:hover ul {
+  top: 74px;
+  opacity: 1;
+  visibility: visible; }
+
+.oilymenu__mainmenu li:hover > a {
+  background: #fff; }
+
+.oilymenu__mainmenu ul li:hover > a {
+  background: #fbb431;
+  color: #000; }
+
+.submenu-style {
+  position: relative; }
+  .submenu-style::after {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f054";
+    top: 0rem;
+    right: 1rem;
+    padding-top: 1.2rem;
+    font-size: 1.2rem; }
+    @media only screen and (max-width: 61.9375em) {
+      .submenu-style::after {
+        display: none; } }
+  @media only screen and (max-width: 61.9375em) {
+    .submenu-style {
+      display: none; } }
+
+.slicknav_menu {
+  display: none; }
+
+.oilymenu-mobile-logo {
+  display: none; }
+
+.slicknav_nav ul {
+  margin: 0 0 0 0px;
+  background: #3b3b3b; }
+  .slicknav_nav ul ul {
+    background: #292929; }
+
+.slicknav_nav .slicknav_row:hover {
+  background: #222;
+  color: #fff; }
+
+.slicknav_nav .slicknav_row, .slicknav_nav a {
+  margin: 2px 0px; }
+
+@media only screen and (max-width: 61.9375em) {
+  .oilymenu-container {
+    background: #1D1E26; }
+    .oilymenu-container .mobile-menu-padding {
+      padding-top: 0;
+      padding-bottom: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2); } }
+    @media only screen and (max-width: 61.9375em) and (max-width: 40em) {
+      .oilymenu-container .mobile-menu-padding {
+        padding-bottom: 0rem; } }
+
+@media only screen and (max-width: 61.9375em) {
+  #menu {
+    display: none; }
+
+  .oilymenu {
+    display: none; }
+
+  #sticky-wrapper {
+    display: none; }
+
+  .slicknav_nav li {
+    border-bottom: 1px solid white; }
+    .slicknav_nav li:last-child {
+      border-bottom: none; }
+
+  .slicknav_menu {
+    display: block;
+    padding: 1rem 2rem; } }
+  @media only screen and (max-width: 61.9375em) and (max-width: 19.9375em) {
+    .slicknav_menu {
+      padding: .5rem 1rem; } }
+
+@media only screen and (max-width: 61.9375em) {
+  .slicknav_menu .slicknav_icon-bar {
+    background-color: #3b3b3b; }
+
+  .slicknav_btn {
+    margin: 8px 10px 8px;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    background-color: #fff; }
+
+  a.slicknav_item.slicknav_row {
+    position: relative; }
+    a.slicknav_item.slicknav_row .slicknav_arrow {
+      position: absolute;
+      right: .8rem;
+      top: 0rem;
+      height: 3.3rem;
+      width: 4rem;
+      line-height: 3.3rem;
+      background: transparent;
+      text-align: center; }
+
+  .oilymenu-mobile {
+    position: relative; }
+    .oilymenu-mobile .oilymenu-mobile-logo {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 2rem;
+      line-height: 3.4rem; } }
+    @media only screen and (max-width: 61.9375em) and (max-width: 19.9375em) {
+      .oilymenu-mobile .oilymenu-mobile-logo {
+        left: 1rem;
+        line-height: 2.4rem; } }
+@media only screen and (max-width: 61.9375em) {
+      .oilymenu-mobile .oilymenu-mobile-logo img {
+        width: 10rem;
+        padding-top: 1.3rem; } }
+      @media only screen and (max-width: 61.9375em) and (max-width: 40em) {
+        .oilymenu-mobile .oilymenu-mobile-logo img {
+          width: 9rem; } }
+      @media only screen and (max-width: 61.9375em) and (max-width: 29.9375em) {
+        .oilymenu-mobile .oilymenu-mobile-logo img {
+          width: 8rem; } }
+      @media only screen and (max-width: 61.9375em) and (max-width: 19.9375em) {
+        .oilymenu-mobile .oilymenu-mobile-logo img {
+          width: 7rem; } }
+
+/*
+  <!-- |==========================================| -->
+  <!-- |=====|| Navbar start ||===============| -->
+  <!-- (Part 01 - End) -->
+  <nav class="oilymenu-container">
+    <div class="oilymenu">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <a href="#" class="oilymenu__logo">
+              <img src="assets/img/logo/logo.png" alt="logo">
+            </a>
+          </div>
+          <div class="col-md-9">
+            <ul class="oilymenu__mainmenu" id="menu">
+              <li><a href="#">label 1</a></li>
+              <li><a href="#">label 1</a></li>
+              <li><a href="#">label 1</a>
+                <ul>
+                  <li><a href="#">label 2</a></li>
+                  <li><a href="#">label 2</a></li>
+                  <li><a href="#">label 2</a></li>
+                  <li><a class="submenu-style" href="#">label 2</a>
+                    <ul>
+                      <li><a href="#">label 3</a></li>
+                      <li><a href="#">label 3</a></li>
+                      <li><a href="#">label 3</a>
+                        <!-- Third level if you need -->
+                        <!--
+                              <ul>
+                                <li><a href="#">label 4</a></li>
+                                <li><a href="#">label 4</a></li>
+                                <li><a href="#">label 4</a></li>
+                                <li><a href="#">label 4</a></li>
+                                <li><a href="#">label 4</a></li>
+                              </ul>
+                            -->
+                        <!-- Third level end -->
+                      </li>
+                      <li><a href="#">label 3</a></li>
+                      <li><a href="#">label 3</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">label 2</a></li>
+                  <li><a href="#">label 2</a></li>
+                </ul>
+              </li>
+              <li><a href="#">label 1</a></li>
+              <li><a href="#">label 1</a></li>
+              <li><a href="#">label 1</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mobile-menu-padding">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="oilymenu-mobile">
+            <div class="oilymenu-mobile-logo">
+              <img src="assets/img/logo/logo-2.png" alt="logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- |=====|| Navbar end ||=================| -->
+  <!-- |==========================================| -->
+*/
+/*
+  ////////////////////////////////////////////////////
+  // oilymenu4 for mobile (Part 03 - End)
+  $('#menu').slicknav({
+    'label': '',
+    'closedSymbol': '&#10010;',
+    'openedSymbol': '&#9866;',
+    'appendTo': '.oilymenu-mobile'
+    // 'prependTo' : '.oilymenu4'
+  });
+*/
+/* index.html */
+.cd-horizontal-timeline .events-content h2 {
+  font-weight: bold;
+  font-size: 2.6rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  line-height: 1.2; }
+  @media only screen and (max-width: 47.9375em) {
+    .cd-horizontal-timeline .events-content h2 {
+      margin-top: 2rem; } }
+
+ul.cd-timeline-navigation li a {
+  text-align: center;
+  line-height: 30px;
+  color: #fbb431; }
+
+ul.cd-timeline-navigation li a:hover {
+  border: 2px solid #fbb431; }
+
+.cd-horizontal-timeline .events-content {
+  margin: 1rem 0rem 0rem; }
+
+@media only screen and (max-width: 47.9375em) {
+  .cd-horizontal-timeline {
+    margin: 0rem; } }
+
+.timeline-img-01 {
+  background: url(../../img/history/history-01.jpg);
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 5rem;
+  border: 5px solid #fff;
+  box-shadow: 0 0 4px #999;
+  margin: 1rem;
+  height: 26rem; }
+  @media only screen and (max-width: 29.9375em) {
+    .timeline-img-01 {
+      margin: 0rem; } }
+
+.timeline-img-02 {
+  background: url(../../img/history/history-02.jpg);
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 5rem;
+  border: 5px solid #fff;
+  box-shadow: 0 0 4px #999;
+  margin: 1rem;
+  height: 26rem; }
+  @media only screen and (max-width: 29.9375em) {
+    .timeline-img-02 {
+      margin: 0rem; } }
+
+.timeline-img-03 {
+  background: url(../../img/history/history-03.jpg);
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 5rem;
+  border: 5px solid #fff;
+  box-shadow: 0 0 4px #999;
+  margin: 1rem;
+  height: 26rem; }
+  @media only screen and (max-width: 29.9375em) {
+    .timeline-img-03 {
+      margin: 0rem; } }
+
+.timeline-img-04 {
+  background: url(../../img/history/history-04.jpg);
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 5rem;
+  border: 5px solid #fff;
+  box-shadow: 0 0 4px #999;
+  margin: 1rem;
+  height: 26rem; }
+  @media only screen and (max-width: 29.9375em) {
+    .timeline-img-04 {
+      margin: 0rem; } }
+
+.timeline-img-05 {
+  background: url(../../img/history/history-05.jpg);
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 5rem;
+  border: 5px solid #fff;
+  box-shadow: 0 0 4px #999;
+  margin: 1rem;
+  height: 26rem; }
+  @media only screen and (max-width: 29.9375em) {
+    .timeline-img-05 {
+      margin: 0rem; } }
+
+.timeline-img-06 {
+  background: url(../../img/history/history-06.jpg);
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 5rem;
+  border: 5px solid #fff;
+  box-shadow: 0 0 4px #999;
+  margin: 1rem;
+  height: 26rem; }
+  @media only screen and (max-width: 29.9375em) {
+    .timeline-img-06 {
+      margin: 0rem; } }
+
+.timeline-img-07 {
+  background: url(../../img/history/history-07.jpg);
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 5rem;
+  border: 5px solid #fff;
+  box-shadow: 0 0 4px #999;
+  margin: 1rem;
+  height: 26rem; }
+  @media only screen and (max-width: 29.9375em) {
+    .timeline-img-07 {
+      margin: 0rem; } }
+
+.timeline-img-08 {
+  background: url(../../img/history/history-08.jpg);
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 5rem;
+  border: 5px solid #fff;
+  box-shadow: 0 0 4px #999;
+  margin: 1rem;
+  height: 26rem; }
+  @media only screen and (max-width: 29.9375em) {
+    .timeline-img-08 {
+      margin: 0rem; } }
+
+.timeline-img-09 {
+  background: url(../../img/history/history-09.jpg);
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 5rem;
+  border: 5px solid #fff;
+  box-shadow: 0 0 4px #999;
+  margin: 1rem;
+  height: 26rem; }
+  @media only screen and (max-width: 29.9375em) {
+    .timeline-img-09 {
+      margin: 0rem; } }
+
+.timeline-img-10 {
+  background: url(../../img/history/history-10.jpg);
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 5rem;
+  border: 5px solid #fff;
+  box-shadow: 0 0 4px #999;
+  margin: 1rem;
+  height: 26rem; }
+  @media only screen and (max-width: 29.9375em) {
+    .timeline-img-10 {
+      margin: 0rem; } }
+
+.timeline-img-11 {
+  background: url(../../img/history/history-11.jpg);
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 5rem;
+  border: 5px solid #fff;
+  box-shadow: 0 0 4px #999;
+  margin: 1rem;
+  height: 26rem; }
+  @media only screen and (max-width: 29.9375em) {
+    .timeline-img-11 {
+      margin: 0rem; } }
+
+/*# sourceMappingURL=main.css.map */
